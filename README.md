@@ -17,7 +17,7 @@ WordlistCraft is a powerful tool for generating customized wordlists based on us
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/offpath/WordlistCraft.git
+    git clone https://github.com/off-path/WordlistCraft.git
     ```
 2. Navigate to the project directory:
     ```bash
