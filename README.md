@@ -1,6 +1,8 @@
-# WordlistCraft
+# WordlistPatternCrafter
 
-WordlistCraft is a powerful tool for generating customized wordlists based on user-defined patterns. It can combine words, numbers, special characters, and more to create comprehensive wordlists for various purposes, such as password generation, security testing, and more.
+
+
+WordlistPatternCrafter is a powerful tool for generating customized wordlists based on user-defined patterns. It can combine words, numbers, special characters, and more to create comprehensive wordlists for various purposes, such as password generation, security testing, and more.
 
 ## Features
 
@@ -17,11 +19,11 @@ WordlistCraft is a powerful tool for generating customized wordlists based on us
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/off-path/WordlistCraft.git
+    git clone https://github.com/off-path/WordlistPatternCrafter.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd WordlistCraft
+    cd WordlistPatternCrafter
     ```
 3. Install the required package:
     ```bash
@@ -30,7 +32,7 @@ WordlistCraft is a powerful tool for generating customized wordlists based on us
 
 ## Usage
 
-WordlistCraft can be used via the command line. Below are the arguments it accepts:
+WordlistPatternCrafter can be used via the command line. Below are the arguments it accepts:
 
 - `-w, --word` (required): Path to the file containing the list of words.
 - `-r, --range`: Range of numbers to add.
