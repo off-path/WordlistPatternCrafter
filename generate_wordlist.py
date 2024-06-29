@@ -17,6 +17,15 @@ def generate_wordlist(args):
 
     with open(input_file, 'r') as infile:
         words = infile.read().splitlines()
+    
+    if args.lowercase:
+        words = [word.lower() for word in words]
+    
+    if args.uppercase:
+        words = [word.upper() for word in words]
+    
+    if args.lower_upper:
+        words = [word.lower() for word in words] + [word.upper() for word in words]
 
     total_combinations = 1
     for p in pattern.split(','):
@@ -60,5 +69,8 @@ if __name__ == "__main__":
     parser.add_argument("-fr", "--full_range", action='store_true', help="Use full range for the length of numbers.")
     parser.add_argument("-p", "--pattern", required=True, help="Pattern of the password (c for special characters, n for numbers, l for letters, p for allprintable, w for the word), example: -p=c,n,p,w,n,l")
     parser.add_argument("-o", "--output", help="Output file to write the generated combinations.")
+    parser.add_argument("-l", "--lowercase", action='store_true', help="Convert all words to lowercase.")
+    parser.add_argument("-u", "--uppercase", action='store_true', help="Convert all words to uppercase.")
+    parser.add_argument("-lu", "--lower_upper", action='store_true', help="Convert all words to lower and uppercase.")
 
     generate_wordlist(parser.parse_args())
