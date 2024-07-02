@@ -37,6 +37,7 @@ WordlistPatternCrafter can be used via the command line. Below are the arguments
 - `-w, --word` (required): Path to the file containing the list of words.
 - `-r, --range`: Range of numbers to add.
 - `-fr, --full_range`: Use full range for the length of numbers (e.g., 001, 002, ...).
+- `-sr, --start-range`: Starting point of the numbers to generate
 - `-p, --pattern` (required): Pattern of the password. The pattern can include:
   - `c` for special characters
   - `n` for numbers
@@ -81,16 +82,16 @@ For example, the pattern c,n,w,n,l will generate combinations where:
 
 #### Full Range
 
-Using the --full_range option will pad the numbers with leading zeros up to the length of the highest number in the range. For example, if the range is 100, numbers will be formatted as 001, 002, ..., 099.
+Using the `--full_range` option will pad the numbers with leading zeros up to the length of the highest number in the range. For example, if the range is 100, numbers will be formatted as 001, 002, ..., 099.
 
-#### start-range
+#### Start-range
 
 The `-sr` or `--start-range` parameter specific to the starting point of the range of numbers to generate. If this parameter is used, numbers will be generated from this value up to the value `start_range + number_range - 1`, where `number_range` is the number range specified by `-r`.
 
 #### Input File
 
-The input file specified by -w or --word should contain one word per line.
+The input file specified by `-w` or `--word` should contain one word per line.
 
 #### Output File
 
-The output file specified by -o or --output will contain the generated wordlist with each combination on a new line.
+The output file specified by `-o` or `--output` will contain the generated wordlist with each combination on a new line.
